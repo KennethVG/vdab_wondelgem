@@ -1,0 +1,11 @@
+div#area {
+   border: 1px solid;
+   height: 200px;
+   width: 400px;
+}
+
+div#popup {
+   visibility: hidden;
+   position: absolute;
+   background-color: yellow;
+}

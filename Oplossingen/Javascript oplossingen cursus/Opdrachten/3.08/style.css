@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+.morning {
+   background-color: blue;
+}
+
+.noon {
+   background-color: yellow;
+   
+}
+
+.evening{
+   background-color: red;
+   
+}

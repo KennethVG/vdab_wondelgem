@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Adres</title>
+<link rel="stylesheet" href="style.css" />
+<script src="Cookie.js"></script>
+<script src="AddressForm.js"></script>
+</head>
+<body>
+   <h1>Address</h1>
+   <form method="get" action="Result.html" id="addressForm">
+      <table>
+         <tr>
+            <td>Lastname:</td>
+            <td><input type="text" name="lastName"
+               id="lastNameField" /> *</td>
+            <td id="lastNameErrorField"></td>
+         </tr>
+         <tr>
+            <td>Firstname:</td>
+            <td><input type="text" name="firstName"
+               id="firstNameField" /> *</td>
+            <td id="firstNameErrorField"></td>
+         </tr>
+         <tr>
+            <td>Street:</td>
+            <td><input type="text" name="street" /></td>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td>Number:</td>
+            <td><input type="text" name="number" /></td>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td>Zipcode:</td>
+            <td><input type="text" name="zipcode" /></td>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td>City:</td>
+            <td><input type="text" name="city" /></td>
+            <td>&nbsp;</td>
+         </tr>
+         <tr>
+            <td>Email:</td>
+            <td><input type="text" name="email" id="emailField" />
+               *</td>
+            <td id="emailErrorField"></td>
+         </tr>
+         <tr>
+            <td>Birthday (dd/mm/yyyy):</td>
+            <td><input type="text" name="birthday"
+               id="birthdayField" /> *</td>
+            <td id="birthdayErrorField"></td>
+         </tr>
+         <tr>
+            <td><input type="submit" value="Submit" /></td>
+            <td><input type="reset" value="Reset" /></td>
+         </tr>
+      </table>
+   </form>
+</body>
+</html>
