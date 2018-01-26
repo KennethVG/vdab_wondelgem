@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+   xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+   version="3.1">
+   <servlet>
+      <servlet-name>GreetingServlet</servlet-name>
+      <servlet-class>exercise3_02.GreetingServlet</servlet-class>
+      <init-param>
+         <param-name>greeting</param-name>
+         <param-value>Hello Saturnus</param-value>
+      </init-param>
+      <init-param>
+         <param-name>font-size</param-name>
+         <param-value>32</param-value>
+      </init-param>
+   </servlet>
+
+   <!-- Exercise 03_07 -->
+   <context-param>
+      <param-name>driver</param-name>
+      <param-value>com.mysql.jdbc.Driver</param-value>
+   </context-param>
+   <context-param>
+      <param-name>url</param-name>
+      <param-value>jdbc:mysql://noelvaes.eu/GuestBookDB</param-value>
+   </context-param>
+   <context-param>
+      <param-name>user</param-name>
+      <param-value>student</param-value>
+   </context-param>
+   <context-param>
+      <param-name>password</param-name>
+      <param-value>student123</param-value>
+   </context-param>
+
+   <!-- Exercise 03_14 -->
+   <filter>
+      <filter-name>encodingFilter</filter-name>
+      <filter-class>exercise3_14.EncodingFilter</filter-class>
+      <init-param>
+         <param-name>encoding</param-name>
+         <param-value>UTF-8</param-value>
+      </init-param>
+   </filter>
+
+   <!-- Exercise 03_16 -->
+   <!-- login-config>
+      <auth-method>BASIC</auth-method>
+   </login-config-->
+
+   <login-config>
+      <auth-method>FORM</auth-method>
+      <form-login-config>
+         <form-login-page>/exercise3_16/Login.html</form-login-page>
+         <form-error-page>/exercise3_16/Error.html</form-error-page>
+      </form-login-config>
+   </login-config>
+   
+   <security-constraint>
+      <web-resource-collection>
+         <web-resource-name>Secret page</web-resource-name>
+         <url-pattern>/exercise3_16/Secret.html</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+         <role-name>Administrators</role-name>
+      </auth-constraint>
+      <!-- Exercise 03_17 -->
+      <user-data-constraint>
+         <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+      </user-data-constraint>
+   </security-constraint>
+
+   <!-- Exercise 03_18 -->
+   <servlet>
+      <servlet-name>SecureServlet</servlet-name>
+      <servlet-class>exercise3_18.SecureServlet</servlet-class>
+      <security-role-ref>
+         <role-name>Admin</role-name>
+         <role-link>Administrators</role-link>
+      </security-role-ref>
+      <security-role-ref>
+         <role-name>User</role-name>
+         <role-link>Guests</role-link>
+      </security-role-ref>
+   </servlet>
+
+   <security-constraint>
+      <web-resource-collection>
+         <web-resource-name>Secret page</web-resource-name>
+         <url-pattern>/Secret.html</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+         <role-name>Administrators</role-name>
+      </auth-constraint>
+   </security-constraint>
+   
+   <security-role>
+      <role-name>Administrators</role-name>
+   </security-role>
+   <security-role>
+      <role-name>Guests</role-name>
+   </security-role>
+
+   <session-config>
+      <session-timeout>1</session-timeout>
+   </session-config>
+
+
+   <error-page>
+      <error-code>404</error-code>
+      <location>/exercise3_19/Error404.html</location>
+   </error-page>
+   <error-page>
+      <exception-type>java.sql.SQLException</exception-type>
+      <location>/exercise3_19//ErrorDatabase.html</location>
+   </error-page>
+
+   <resource-ref>
+      <res-ref-name>jdbc/StudentDS</res-ref-name>
+      <lookup-name>java:/datasources/StudentDS</lookup-name>
+   </resource-ref>
+
+   <resource-ref>
+      <res-ref-name>jdbc/GuestBookDS</res-ref-name>
+      <lookup-name>java:/datasources/GuestBookDS</lookup-name>
+   </resource-ref>
+</web-app>

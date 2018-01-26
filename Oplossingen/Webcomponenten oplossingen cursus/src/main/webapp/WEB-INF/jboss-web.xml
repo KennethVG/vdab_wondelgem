@@ -1,0 +1,5 @@
+<jboss-web>
+   <security-domain>other</security-domain>
+	<virtual-host>default-host</virtual-host>
+</jboss-web>
+ 

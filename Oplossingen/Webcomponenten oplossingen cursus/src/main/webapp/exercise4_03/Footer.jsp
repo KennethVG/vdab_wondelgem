@@ -1,0 +1,1 @@
+<hr />Copyright<sup>&copy;</sup> 2017 No&euml;l Vaes

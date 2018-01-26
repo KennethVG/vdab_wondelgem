@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context antiResourceLocking="true">
+   <Resource name="jdbc/StudentDS" auth="Container"
+      type="javax.sql.DataSource" maxActive="100" maxIdle="30" maxWait="10000"
+      username="student" password="student123" driverClassName="com.mysql.jdbc.Driver"
+      url="jdbc:mysql://noelvaes.eu:3306/StudentDB" />
+   <Resource name="jdbc/GuestBookDS" auth="Container"
+      type="javax.sql.DataSource" maxActive="100" maxIdle="30" maxWait="10000"
+      username="student" password="student123" driverClassName="com.mysql.jdbc.Driver"
+      url="jdbc:mysql://noelvaes.eu:3306/GuestBookDB" />
+</Context>

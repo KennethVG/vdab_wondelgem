@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nv:contact xmlns:nv="http://www.noelvaes.eu/contact" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <nv:name>Noël Vaes</nv:name>
+  <nv:address>Roode Roosstraat 5</nv:address>
+  <nv:city>Hasselt</nv:city>
+  <nv:country>Belgium</nv:country>
+  <nv:phone nv:type="mobile">+32 474 38 23 94</nv:phone>
+  <nv:notes><![CDATA[Java Trainer]]></nv:notes>
+</nv:contact>
+

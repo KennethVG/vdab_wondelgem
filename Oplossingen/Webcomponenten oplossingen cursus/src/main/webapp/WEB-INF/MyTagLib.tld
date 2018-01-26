@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+   <tlib-version>1.0</tlib-version>
+   <short-name>MyTaglib</short-name>
+
+   <!-- Exercise5_01 -->
+   <tag>
+      <description>This tag displays the text 'Hello World'</description>
+      <name>hello</name>
+      <tag-class>exercise5_01.HelloWorldHandler</tag-class>
+      <body-content>empty</body-content>
+   </tag>
+
+   <!-- Exercise5_02 -->
+   <tag>
+      <name>calculate</name>
+      <tag-class>exercise5_02.CalculateHandler</tag-class>
+      <body-content>empty</body-content>
+      <attribute>
+         <name>number1</name>
+         <required>yes</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      <attribute>
+         <name>number2</name>
+         <required>yes</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+   </tag>
+   <tag>
+      <name>reverse</name>
+      <tag-class>exercise5_02.ReverseHandler</tag-class>
+      <body-content>empty</body-content>
+      <attribute>
+         <name>text</name>
+         <required>yes</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+   </tag>
+
+   <!-- Exercise5_03 -->
+   <tag>
+      <name>hello2</name>
+      <tag-class>exercise5_03.HelloWorldHandler</tag-class>
+      <body-content>empty</body-content>
+      <dynamic-attributes>true</dynamic-attributes>
+   </tag>
+   <tag>
+      <name>format</name>
+      <tag-class>exercise5_03.FormatHandler</tag-class>
+      <body-content>tagdependent</body-content>
+      <dynamic-attributes>true</dynamic-attributes>
+   </tag>
+   <tag>
+      <name>uppercase</name>
+      <tag-class>exercise5_03.UppercaseHandler</tag-class>
+      <body-content>tagdependent</body-content>
+   </tag>
+   <tag>
+      <name>repeat</name>
+      <tag-class>exercise5_03.RepeatHandler</tag-class>
+      <body-content>tagdependent</body-content>
+      <attribute>
+         <name>count</name>
+         <required>yes</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+   </tag>
+
+   <!-- Exercise5_05 -->
+   <function>
+      <name>kw2hp</name>
+      <function-class>exercise5_05.Conversions</function-class>
+      <function-signature>float kw2hp(float)</function-signature>
+   </function>
+   <function>
+      <name>hp2kw</name>
+      <function-class>exercise5_05.Conversions</function-class>
+      <function-signature>float hp2kw(float)</function-signature>
+   </function>
+   <function>
+      <name>km2mi</name>
+      <function-class>exercise5_05.Conversions</function-class>
+      <function-signature>float km2mi(float)</function-signature>
+   </function>
+   <function>
+      <name>mi2km</name>
+      <function-class>exercise5_05.Conversions</function-class>
+      <function-signature>float mi2km(float)</function-signature>
+   </function>
+   <function>
+      <name>round</name>
+      <function-class>exercise5_05.Conversions</function-class>
+      <function-signature>java.lang.String round(float,int)</function-signature>
+   </function>
+   
+   <function>
+      <name>toDate</name>
+      <function-class>exercise5_13.DateTimeConvertor</function-class>
+      <function-signature>java.util.date toDate(java.time.LocalDateTime)</function-signature>   
+   </function>
+</taglib>
