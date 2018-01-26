@@ -1,0 +1,41 @@
+#sticky-titel {
+	font-family: monospace;
+	padding: 5px;
+	margin: 30px;
+}
+
+#invoerveld {
+	border: 3px solid darkgreen;
+	padding: 15px;
+	margin-right: 15px;
+	line-height: 25px;
+}
+
+#button1 {
+	border: 3px solid darkgreen;
+	padding: 15px;
+	margin-left: 25px;
+}
+
+#button2 {
+	border: 3px solid darkgreen;
+	padding: 15px;
+}
+
+.btn {
+	font-family: monospace;
+	font-size: 20px;
+}
+
+#achtergrond {
+	border: 3px solid darkgreen;
+}
+
+.stickynote {
+	height: 120px;
+	width: 120px;
+	background-color: yellowgreen;
+	margin: 15px;
+	box-shadow: 5px 3px 12px #494747;
+	word-wrap: break-word;
+}
